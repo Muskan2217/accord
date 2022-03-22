@@ -1,0 +1,202 @@
+
+#whole_sec {
+// right section starts from here----
+  .right_sec {
+   width: 850px;
+   margin-left: 2rem;
+    .text_area {
+      width: 100%;
+      // common heading properties-----
+      .heading {
+        @include heading($blue, 7%, 5%);
+      
+      }
+    }
+
+    // right_top_area starts here-------
+    .right_top_area {
+      width: 100%;
+      padding: 10% 4%;
+      @include bgimg("../images/banner-bg-home.jpg");
+      @include bordertop($blue);
+    
+      // text_area starts------------------------
+      .text_area {
+        width: 50%;
+
+   
+      } // text_area ends-----
+      // image area--------
+      .img_area {
+        width: 40%;
+        img{width: 100%;}
+      }
+    } // right_top_area ends here
+    // ------------------------------------------------------------
+    //   london_paris_box section starts------------
+    #london_paris_box {
+      width: 100%;
+      margin: 2rem 0;
+
+      .img_area {
+        width: 100%;
+        height: 250px;
+      }
+      .text_area {
+        background-color: $white;
+        padding: 10% 6% 4%;
+      }
+
+        p {
+          padding-bottom: 1rem;
+        }
+    //  -----------------------------
+      .london {
+        width: 48%;
+        @include bordertop($blue);
+
+        .img_area {
+          @include bgimg("../images/home-img-2.jpg");
+        }
+        // .text_area {
+          
+        //   .heading {
+        //     @include heading($blue, 7%, 2%);
+        //   }
+        // }
+
+         span {
+          color: $blue;
+        }
+      }
+      // london ends----
+      .paris {
+        width: 48%;
+        @include bordertop($orange);
+        .img_area {
+          @include bgimg("../images/home-img-3.jpg");
+        }
+        // .text_area {
+        //   .heading {
+        //     @include heading(100%, 50px, $orange, 7%, 2%);
+        //   }
+        // }
+        span {
+          color: $orange;
+        }
+      }
+      // paris ends-----
+
+      footer {
+        border-top: 1px solid $black;
+        padding: 1rem 0;
+        align-items: baseline;
+        .foot_left {
+          width: 30%;
+        }
+        .foot_right {
+          width: 20%;
+        }
+
+        h3 {
+          text-transform: uppercase;
+          font-weight: 600;
+        
+        }
+
+        span,
+        i {  font-size: 1.2rem;
+        }
+
+        i {
+          color: $gray;
+          cursor: pointer;
+        }
+      }
+
+      i:hover {
+        color: #ccc;
+      }
+    } 
+    //  london_paris_box section ends-------------
+    //  right bottom starts------------------
+    .right_bottom{
+      background-color: $white;
+      @include mainpro(100%, auto, 3rem, 2rem, 2rem, 2rem, 2%, 0, 0, 0);
+      @include bordertop($green);
+      p {
+        margin-left: 0%;
+      }
+  
+      .img_box {
+      
+        margin-bottom: 4%;
+        figure {
+          overflow: hidden;
+          width: 31%;
+          position: relative;
+          img {
+            width: 100%;
+          }
+
+           figcaption {
+            padding: 1rem 0.8rem;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+   
+            color: $white;
+          }
+          .blue {
+            background-color: $blue;
+            opacity: 0.8;
+          }
+          .green {
+            background-color: $green;
+            opacity: 0.8;
+          }
+          .orange {
+            background-color: $orange;
+            opacity: 0.8;
+          }
+    }
+
+
+  }
+
+        footer {
+       
+        justify-content: right;
+        border-top: 1px solid $gray;
+        margin-top: 4%;
+        padding: 1%;
+
+        h4 {
+          font-size: 1.2rem;
+          color: #ccc;
+          padding-left: 0.5rem;
+         
+        }
+
+        h4:hover {
+          color: $gray;
+        }
+      }
+  }  // right bottom ends-------------------
+   
+  .main_footer{
+    width: 100%;
+    color: $white;
+   justify-content: flex-end;
+ 
+   h4{
+      font-size: .8rem;
+      padding: 2rem 0;
+   }
+  }
+  } // right section ends--------------
+
+} // whole section ends  here----------
+

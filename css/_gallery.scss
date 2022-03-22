@@ -1,0 +1,145 @@
+#whole_sec {
+  // right section starts from here----
+  .right_sec {
+    // right_top_area starts here-------
+    .img_container {
+      width: 100%;
+      background: none;
+      background-color: $white;
+      @include bordertop($seagreen);
+      flex-direction: column;
+
+      .heading {
+        @include heading($seagreen, 5%, 2%);
+      }
+
+      .gallery {
+        width: 100%;
+        height: 1000px;
+        column-count: 3;
+
+        .img {
+          margin-bottom: 20px;
+          cursor: pointer;
+          transition: all 0.5s ease;
+        }
+        .img_1,
+        .img_3,
+        .img_6,
+        .img_8 {
+          height: 23.5%;
+        }
+
+        .img_2,
+        .img_7,
+        .img_4,
+        .img_5 {
+          height: 49%;
+        }
+
+        .img_1 {
+          @include bgimg("../images/gallery-item-1.jpg");
+        }
+
+        .img_2 {
+          @include bgimg("../images/gallery-item-2.jpg");
+        }
+
+        .img_3 {
+          @include bgimg("../images/gallery-item-8.jpg");
+        }
+
+        .img_4 {
+          @include bgimg("../images/gallery-item-4.jpg");
+        }
+
+        .img_5 {
+          @include bgimg("../images/gallery-item-7.jpg");
+
+          margin-bottom: 0px;
+        }
+
+        .img_6 {
+          @include bgimg("../images/gallery-item-6.jpg");
+        }
+
+        .img_7 {
+          @include bgimg("../images/gallery-item-5.jpg");
+        }
+
+        .img_8 {
+          @include bgimg("../images/gallery-item-3.jpg");
+
+          margin-bottom: 0px;
+        }
+      }
+      a {
+        margin: 0 auto;
+        .my_btn {
+          width: 130px;
+          margin: 2rem 0 0;
+          background-color: $seagreen;
+        }
+
+        .my_btn:hover {
+          background-color: $darkslategray;
+        }
+      }
+    }
+    //  ----------------------------------
+    #img_slider {
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.776);
+      position: fixed;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      // -------------------
+      .img_box {
+        width: 50%;
+        height: 85%;
+        text-align: center;
+        overflow: hidden;
+        background-color: green;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .fa {
+          color: #fff;
+          font-size: 3rem;
+          position: absolute;
+          top: 50%;
+        
+          cursor: pointer;
+        }
+        #prev {
+          left: 10%;
+          transform: rotate(-90deg);
+        }
+        #next {
+          right: 10%;
+          transform: rotate(90deg);
+        }
+      }
+      // ----------------------------
+      #close_btn {
+        color: #fff;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 2%;
+        right: 23%;
+        cursor: pointer;
+      }
+    }
+  } // right section ends--------------
+} // whole section ends  here----------

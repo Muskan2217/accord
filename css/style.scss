@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+// variables---
+
+$blue: #10a5cd;
+$green: #75bd29;
+$seagreen:#19beb6;
+$darkgreen: #6bb522cc;
+$orange: #df9801;
+$gray: #757575;
+$darkslategray: darkslategray;
+$black: #000;
+$white: #fff;
+$red: #a92446;
+
+// ------------------
+html {
+  
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  font-size: 15px;
+  a {
+    color: #fff;
+    cursor: pointer;
+
+    transition: 0.5s;
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+ 
+}
+
+// body{position: relative;}
+// mixin-------------
+@mixin bordertop($mycolor) {
+  border-top: 7px solid $mycolor;
+}
+// ----------------------------------
+@mixin samepro {
+  width: 100%;
+  height: 150px;
+}
+// -------------------------------
+
+@mixin heading ($mycolor, $mb, $pl){
+   border-left: 4px solid $mycolor;
+  margin-bottom: $mb;
+  padding-left: $pl;
+  h2 {
+    color: $mycolor;
+  }
+  flex-direction: column;
+  justify-content: center;
+}
+// --------------------------------
+@mixin mainpro($w, $h, $pt, $pr, $pb, $pl, $mt, $mr, $mb, $ml) {
+  width: $w;
+  height: $h;
+  padding: $pt $pr $pb $pl;
+  margin: $mt $mr $mb $ml;
+}
+// -------------------------
+@mixin bgimg($img) {
+  background: url($img) top no-repeat;
+  background-size: cover;
+}
+// -------------------------
+h1 {
+  font-size: 4.5rem;
+  letter-spacing: 5px;
+  font-weight: 700;
+  padding-top: 0;
+  letter-spacing:.1px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-size: 200;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: .9rem;
+  font-weight: 100;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-left: 4%;
+}
+// ------------
+.flex_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+     // button--------
+        .my_btn {
+          width: 150px;
+          background-color: $darkslategray;
+          color: $white;
+          font-size: 1rem;
+          font-weight: 600;
+          border: none;
+          padding: 0.7rem 0;
+          margin: 3rem 0;
+          margin-left: 4%;
+          transition: 0.5s;
+           cursor: pointer;
+        }
+        .my_btn:hover {
+          background-color: $blue;
+        }
+// main body css=============
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// whole section starts from here----------
+#whole_sec {
+  width: 100%;
+  background: url("../images/page-bg.jpg") no-repeat top center;
+  background-size:cover;
+  background-attachment: fixed;
+  padding: 5rem 0 5rem ;
+  justify-content: center;
+// position: relative;
+  .left_sec {
+    @include mainpro(300px,800px, 0, 0, 0, 0, 0, 0, 0, 0);
+    overflow: hidden;
+    color: $white;
+    text-transform: uppercase;
+    // flex-direction: column;
+    justify-content: center;
+
+ a:hover {
+    color: #92d6e9;
+  }
+    h3 {
+      padding: 0.5rem 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-shadow: 1px 1px 1px black;
+    }
+
+    // home
+    .home {
+      @include samepro;
+      @include bgimg("../images/menu-bg-home.png");
+      padding: 1rem;
+      align-items: flex-end;
+    }
+
+    // about and contact boxes
+    .about_contact {
+      @include samepro;
+      i {
+        font-size: 4rem;
+      }
+      // about
+      .about {
+        width: 48%;
+        background-color: $red;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      // contact
+      .contact {
+        width: 48%;
+        background-color: $darkgreen;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    } // about and contact boxes ends  here---------------
+
+    // gallery
+    .gallery {
+      width: 100%;
+      height: 300px;
+      @include bgimg("../images/menu-bg-gallery.png");
+      padding: 1rem;
+      
+      align-items:flex-end;
+    }
+
+    // slider----------------------
+    .myslider {
+      @include samepro;
+
+      figcaption {
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #cfb011;
+      }
+      .owl-nav button.owl-next,
+      .owl-nav button.owl-prev,
+      button.owl-dot {
+        background: 0 0;
+        font-size: 2rem;
+        position: absolute;
+        top: 20%;
+        transition: 0.5s;
+        text-shadow: 1px 1px 1px #000;
+      }
+
+      .owl-nav button.owl-next {
+        right: 0;
+      }
+      .owl-nav button.owl-prev {
+        left: 0;
+      }
+    }
+  }
+
+}
+
+@import "home";
+@import "about";
+@import "contact";
+@import "gallery";
+@import "responsive";

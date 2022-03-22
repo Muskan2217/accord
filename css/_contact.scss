@@ -1,0 +1,126 @@
+#whole_sec {
+  // right section starts from here----
+
+  .right_sec {
+    // right_top_area starts here-------
+    .contact {
+      width: 100%;
+      padding: 7% 4%;
+      background: none;
+      background-color: $white;
+      @include bordertop($blue);
+
+      // text_area starts------------------------
+      .text_area {
+        width: 50%;
+      } // text_area1 ends-----
+
+      .contact_box {
+        width: 100%;
+
+        form {
+          width: 48%;
+
+          input,
+          textarea {
+            width: 100%;
+            margin-bottom: 1.6rem;
+            padding: 0.8rem 0.6rem;
+          }
+          .my_btn{
+            width: 110px;
+            background-color: $blue;
+            color:$white;
+            margin-left: 0;
+            margin-top: .3rem;
+          }
+          .my_btn:hover{
+           background-color:#067a9a;
+          }
+        }
+       // ----------------------------
+        .contact_title {
+          margin-top: -0.8rem;
+          width: 49%;
+          .text_area {
+            width: 100%;
+
+            .heading {
+              width: 100%;
+              border: none;
+              height: 100px;
+              margin-bottom: 0;
+              h1 {
+                font-size: 2.7rem;
+              }
+              h2 {
+                font-size: 1rem;
+                color: $gray;
+              }
+            }
+            p {
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5;
+            }
+
+            .link_box {
+              flex-direction: column;
+              margin-top: 2rem;
+              margin-left: 4%;
+              justify-content: baseline;
+             
+              i {
+                padding-bottom: 0.7rem;
+                font-weight: 600;
+                transition: .5s;
+                cursor: pointer;
+              }
+             i:hover{
+               color: $blue;
+             }
+              .links {
+                width: 50%;
+                flex-direction: row;
+                margin-top: 1rem;
+
+                .fa{
+                  font-size: 1.2rem;
+                  transition: .5s;
+                }
+                .fa-rss {
+                  background-color: $orange;
+                  padding: 0.5rem 0.7rem;
+                }
+               .fa-rss:hover{
+                 background-color: #ae7906;
+               }
+                .fa-twitter {
+                  background-color: $blue;
+                  padding: 0.5rem 0.7rem;
+                }
+                .fa-twitter:hover {
+                  background-color: #067a9a;
+                }
+                .fa-facebook {
+                  padding: 0.5rem 1rem;
+                  background-color: #2b55ec;
+                }
+              .fa-facebook:hover{
+                  background-color: #052cba;
+               
+              }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .map_area{
+     padding-top: 2rem;
+      width: 100%;
+    
+    }
+  } // right_top_area ends here
+} // whole section ends  here----------
